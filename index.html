@@ -6,8 +6,89 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Javascript</h1>
+        <ul id="menu">
+            <li class="menu-item">Home</li>
+            <li class="menu-item">About us</li>
+            <li class="menu-item">Contact</li>
+        </ul>
 
+    <h1 id="text" class="main sub-main" style="font-size: 60px;">Javascript</h1>
+    <h2 class="text2">Javascript 2</h2>
+    <h2 class="text2">Javascript 3</h2>
+
+    <input type="text" id="name" name="gender" value="male" placeholder="enter name">
+    <!-- <input type="radio" name="gender" value="female"> -->
+
+<script>
+    // SELECTING USING DOM 
+    // const element = document.getElementById('text')
+    // console.log(element)
+    // const element = document.getElementsByName('gender')
+    // console.log(element)
+    // const element = document.getElementsByTagName('h1')
+    // console.log(element)
+    // const element = document.getElementsByClassName('text2')
+    // console.log(element)
+    // const element = document.querySelectorAll('.text2')
+    // console.log(element)
+
+    // GETTING PARENT NODE FROM CHILD NODE 
+    // const parentElement = document.querySelector('.menu-item')
+    // console.log(parentElement.parentNode)
+
+    // GETTING CHILD NODE FROM PARENT NODE 
+    // const childElement = document.querySelector('#menu')
+    // console.log(childElement.children)
+
+    // const element = document.querySelector('#text')
+    // element.innerHTML = "<p>Hello</p>"
+
+    // const newElement = document.createElement('div')
+    // newElement.textContent = "Goodmorning"
+    // document.body.append(newElement)
+    // console.log(newElement)
+    // const newElement = document.createElement('div')
+    // newElement.innerHTML = "<p>Goodmorning</p>"
+    // newElement.className = 'title'
+    // console.log(newElement)
+
+    // ADDING AND REMOVING CLASSES 
+    // const removeElement = document.getElementById('menu')
+    // removeElement.removeChild(removeElement.lastElementChild)
+
+    // const addElement = document.getElementById('menu')
+    // const result = document.createElement('li')
+    // result.textContent = "Services"
+    // result.className = "menu-item"
+    // addElement.appendChild(result)
+    // addElement.insertBefore(result, addElement.firstElementChild)
+    // console.log(addElement.insertBefore(result, addElement.firstElementChild))
+
+    // ATTRIBUTE METHODS 
+    // const element = document.getElementById('name')
+    // console.log(element.getAttribute('name'))
+
+    // const element = document.getElementById('name')
+    // element.setAttribute('class','sub')
+    // console.log(element)
+
+    // const element = document.getElementById('name')
+    // console.log(element.hasAttribute("class"))
+
+    // const element = document.querySelector('#text')
+    // element.style.cssText += "background-color: black; color:white;"
+
+    // const getClass = document.querySelector('#text')
+    // getClass.className += " new"
+    // console.log(getClass)
+    
+    const element = document.querySelector('#text')
+    element.classList.toggle('sub-main')
+    console.log(element)
+
+
+    
+</script>
  <script src="script2.js"></script>
 </body>
 </html>

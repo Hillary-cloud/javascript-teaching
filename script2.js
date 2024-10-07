@@ -236,8 +236,8 @@ const companies = [
 // })
 // console.log(dangoteCompany)
 
-for(let i = 0; i < companies.length; i++){
-    if(companies[i].location === 'Nigeria'){
-        console.log(companies[i])
-    }
-}
+// for(let i = 0; i < companies.length; i++){
+//     if(companies[i].location === 'Nigeria'){
+//         console.log(companies[i])
+//     }
+// }
