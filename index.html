@@ -4,8 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: white;
+            color: black;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        .dark-mode {
+            background-color: black ;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <button onclick="toggleBackground()" >Toggle Background</button>
+
         <ul id="menu">
             <li class="menu-item">Home</li>
             <li class="menu-item">About us</li>
@@ -18,8 +31,55 @@
 
     <input type="text" id="name" name="gender" value="male" placeholder="enter name">
     <!-- <input type="radio" name="gender" value="female"> -->
+     <br>
 
+     <button id="btn" type="submit" >Click me</button>
+
+     <h1 id="content"> Hello world</h1>
+
+     <button id="changeContentBtn">Change content</button><br><br>
+
+     <input id="submitInput" type="text" value="">
+     <!-- <button type="submit" onclick="sayHello()" >Submit</button> -->
+     <button type="submit" id="submitInputBtn" >Submit</button>
 <script>
+    // TOGGLE BACKGROUND 
+
+    function toggleBackground(){
+        document.body.classList.toggle('dark-mode')
+    }
+    // function sayHello(){
+    //     const inputVal = document.getElementById('submitInput').value
+    //     alert('Hello '+ inputVal)
+    // }
+    // or 
+
+    // function sayHello(){
+    //     const sayHelloInput = document.getElementById('submitInput').value 
+    //     alert('Hello '+ sayHelloInput)
+    // }
+    // document.getElementById('submitInputBtn').addEventListener('click', sayHello)
+
+    document.getElementById('changeContentBtn').addEventListener('click', function(){
+        changeH1 = document.getElementById('content')
+        changeH1.innerHTML = "<h2>Content Changed</h2><p>This is a new content</p>"
+        changeH1.style.cssText = "color: green; font-size: 24px;"
+    })
+    // const greetClasss = () => {
+    //     alert('goodmorning class')
+    // }
+
+    // const greetClass = document.getElementById('btn')
+    // greetClass.addEventListener('click', greetClasss)
+
+    // greetClass.removeEventListener('click', greetClasss)
+
+    // const greetClass = document.getElementById('btn')
+    // greetClass.onclick = function(){
+    //     alert('goodmorning class again')
+    // }
+
+
     // SELECTING USING DOM 
     // const element = document.getElementById('text')
     // console.log(element)
@@ -82,9 +142,9 @@
     // getClass.className += " new"
     // console.log(getClass)
     
-    const element = document.querySelector('#text')
-    element.classList.toggle('sub-main')
-    console.log(element)
+    // const element = document.querySelector('#text')
+    // element.classList.toggle('sub-main')
+    // console.log(element)
 
 
     
